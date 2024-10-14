@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@keyframes slide {
+  0% {
+    right: -100%; /* start off-screen */
+  }
+  100% {
+    right: 100%; /* end off-screen */
+  }
+}
+
+.animate-slide {
+  animation: slide 40s linear infinite;
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #FAB702;
+}
+
+::selection {
+  color: white;
+  background: #FAB702;
+}
